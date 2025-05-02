@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>SAPA - BẮC HÀ</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: Cascadia Mono;
+      background: url('https://scontent.iocvnpt.com/resources/portal//Images/LCI/Import/636574199537218162_1506303159241-3_compressed.jpg') no-repeat center center fixed;      background-size: cover;
+      background-size: cover;
+      opacity:0,8;
+    }
+    .white-box {
+        max-width: 1200px;
+        margin: 40px auto;
+        background-color: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+    .top-bar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.618);
+      padding: 10px 20px;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+    .logo img {
+      height: 40px;
+      margin-right: 10px;
+    }
+    .logo h1 {
+      font-size: 22px;
+      color: #2c3e50;
+      margin: 0;
+    }
+    .search {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .search-box {
+      display: flex;
+      align-items: center;
+      background: #f7f7f7;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+    .search-box input {
+      border: none;
+      background: transparent;
+      outline: none;
+    }
+    .flag {
+      width: 30px;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      position: absolute;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.2); 
+      backdrop-filter: blur(4px); 
+      -webkit-backdrop-filter: blur(4px); 
+      z-index: 10;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+    }
+    nav a i {
+      margin-right: 8px;
+    }
+    nav a:hover {
+      background-color: #1abc9c;
+    }
+    @media (max-width: 768px) {
+      .top-bar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .search-weather {
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 10px;
+      }
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav a {
+        width: 100%;
+        padding: 10px;
+      }
+    } 
+    .timeline-item {
+      display: flex;
+      margin-bottom: 30px;
+    }
+    .time {
+      width: 80px;
+      font-weight: bold;
+      font-size: 18px;
+      margin-right: 10px;
+    }
+    .content {
+      background-color: #f4f4f4;
+      border-radius: 10px;
+      padding: 15px;
+      flex: 1;
+    }
+    .title {
+      font-size: 18px;
+      color: #1abc9c;
+      font-weight: bold;
+    }
+    .price {
+      float: right;
+      color: red;
+      font-weight: bold;
+    }
+    .location {
+      font-size: 14px;
+      margin: 5px 0;
+    }
+    .description {
+      font-size: 14px;
+      color: grey;
+      margin-bottom: 10px;
+    }
+    .images {
+      display: flex;
+      gap: 5px;
+      flex-wrap: wrap;
+    }
+    .images img {
+      width: 80px;
+      height: 60px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+    h3{
+        text-align: left;
+        font-size:30px;
+        margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+    <div class="background"></div>
+    <div class="top-bar">
+    <div class="logo">
+      
+    <h1><b>TÂY BẮC TOUR</b></h1>
+    </div>
+    <div class="search">
+      <div class="search-box">
+        <i class="fas fa-search"></i>
+        <input type="text" placeholder="Tìm kiếm...">
+      </div>
+      <img src="https://flagcdn.com/gb.svg" alt="flag" class="flag">
+    </div>
+  </div>
+  <nav>
+    <a href="TCindex.html"><i class="fas fa-home"></i>Trang Chủ</a>
+    <a href="#"><i class="fas fa-hotel"></i>Khách Sạn</a>
+    <a href="#"><i class="fas fa-plane"></i>Phương Tiện</a>
+    <a href="#"><i class="fas fa-map-marker-alt"></i>Điểm Đến</a>
+    <a href="#"><i class="fas fa-book"></i>Cẩm nang du lịch</a>
+    <a href="#"><i class="fas fa-utensils"></i>Ẩm Thực</a>
+    <a href="#"><i class="fas fa-credit-card"></i>Thanh Toán</a>
+    <a href="#"><i class="fas fa-headset"></i>Liên Hệ</a>
+  </nav>
+
+  <!-- Timeline item 1 -->
+  <div class="white-box">
+    <h3>Ngày 1</h3>
+    <div class="timeline-item">
+      <div class="time">08:30</div>
+      <div class="content">
+        <div class="title">
+          Bản Cát Cát
+          <span class="price">70.000 đ</span>
+        </div>
+        <div class="location">📍Bản Cát Cát, xã Hoàng Liên, thị xã Sa Pa, tỉnh Lào Cai Xã Hoàng Liên, Thị Xã Sa Pa, Tỉnh Lào Cai</div>
+        <div class="description">Giữa khung cảnh núi rừng hoang sơ hùng vĩ của mảnh đất Sa Pa, bản Cát Cát mộc mạc hiện lên đầy cuốn hút với nhà gỗ đơn sơ, những con suối nhỏ chảy róc rách, những tấm thổ cẩm rực rỡ sắc màu và con người dân tộc thiểu số</div>
+        <div class="images">
+          <img src="https://motogo.vn/wp-content/uploads/2020/02/sapa-cat-cat.jpg" alt="">
+          <img src="https://cdn3.ivivu.com/2024/07/ban-cat-cat-ivivu-17.jpg" alt="">
+          <img src="https://fansipanlegend.sunworld.vn/wp-content/uploads/2024/04/1-ban-cat-cat.png" alt="">
+        </div>
+      </div>
+    </div>
+
+  <div class="timeline-item">
+    <div class="time">11:30</div>
+    <div class="content">
+      <div class="title">
+        Ăn Trưa tại khách sạn
+        <span class="price">Miễn Phí</span>
+      </div>
+      <div class="location">📍 Nhà ăn của khách sạn</div>
+      <div class="description">Khách sạn phục vụ cho quý khách những món ăn đặc trưng của vùng Tây Bắc</div>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+        <div class="time">14:00</div>
+        <div class="content">
+          <div class="title">
+            Chợ Sa Pa
+            <span class="price">Miễn Phí</span>
+        </div>
+          <div class="location">📍Trung Tâm Thị Trấn Sa Pa </div>
+          <div class="description">Tham quan chợ và tham gia các hoạt động sôi động của chợ, lượn quanh các cửa hàng bán đặc sản địa phương vô cùng hấp dẫn</div>
+          <div class="images">
+            <img src="https://video.laocaitv.vn/uploads/00KHOANH/2023/01/c6_4.jpg" alt="">
+            <img src="https://tourdulichsapagiare.com/view/at_dac-san-phien-cho-sapa_7d901914c2ef73ad9b9a3e954c995021.jpg" alt="">
+            <img src="https://sapatrip.vn/wp-content/uploads/2021/07/A%CC%89nh-da%CC%A3i-die%CC%A3%CC%82n-Cho%CC%9B%CC%A3-Ti%CC%80nh-Sapa.jpg" alt="">
+          </div>
+        </div>
+    </div>
+
+    <div class="timeline-item">
+        <div class="time">18:00</div>
+        <div class="content">
+          <div class="title">
+            Nhà Hàng Hải Yến
+            <span class="price">150.000 đ</span>
+        </div>
+          <div class="location">📍12 Thạch Sơn Phường Sa Pa, Thị Xã Sa Pa, Tỉnh Lào Cai </div>
+          <div class="description">Thưởng thức các món ăn hấp dẫn sau một ngày đi tham quan quả thật là một điều tuyệt với, du khách sẽ lựa chọn những món ăn đặc sắc, hấp dẫn với những nguyên liệu tươi ngon nhất của nhà hàng</div>
+          <div class="images">
+            <img src="https://scontent.iocvnpt.com/resources/portal//Images/LCI/phlong.cv/nha-hang-sapa/nha-hang-hai-yen/cropper_820711887.jpg" alt="">
+            <img src="https://scontent.iocvnpt.com/resources/portal//Images/LCI/phlong.cv/nha-hang-sapa/nha-hang-hai-yen/427741553_425278573190210_2670813045552581257_n_212974233.jpg" alt="">
+            <img src="https://scontent.iocvnpt.com/resources/portal//Images/LCI/phlong.cv/nha-hang-sapa/nha-hang-hai-yen/428598487_425683149816419_4882831935196893154_n_178107807.jpg" alt="">
+          </div>
+        </div>
+    </div>
+
+    <div class="timeline-item">
+        <div class="time">20:00</div>
+        <div class="content">
+          <div class="title">
+            Hồ Sa Pa
+            <span class="price">Miễn Phí</span>
+        </div>
+          <div class="location">📍Trung Tâm Thị Trấn Sa PaPa </div>
+          <div class="description">Dạo quanh hồ là một trải nghiệm thú vị, đặc biệt là về đêm với những ánh đèn lung linh, mờ ảo</div>
+          <div class="images">
+            <img src="https://vietfeelingtravel.vn/wp-content/uploads/2024/09/Ho-xanh-sapa.jpg" alt="">
+            <img src="https://www.kynghidongduong.vn/userfiles/images/tour-trong-nuoc/sapa/ho-sapa-du-lich-sapa-kynghidongduong-001.jpg" alt="">
+            <img src="https://luhanhvietnam.com.vn/du-lich/vnt_upload/news/07_2023/ho_mat_ngoc_sapa_9.jpg" alt="">
+          </div>
+        </div>
+    </div>
+
+
+  </div>
+
+<div class="white-box">
+  <h3>Ngày 2</h3>
+  <div class="timeline-item">
+  <div class="time">07:30</div>
+  <div class="content">
+    <div class="title">
+      Nhà thờ đá Sa Pa
+      <span class="price">Miễn Phí</span>
+    </div>
+    <div class="location">📍 Trung tâm thị trấn Phường Sa Pa, Thị Xã Sa Pa, Tỉnh Lào Cai</div>
+    <div class="description">Nhà thờ cổ còn có tên là nhà thờ đá hay nhà thờ Đức Mẹ Mân côi nằm ngay giữa trung tâm thị trấn Sapa, được người Pháp xây dựng từ đầu thế kỷ 20. Trước khi đặt những viên gạch móng đầu tiên cho công trình này.</div>
+    <div class="images">
+      <img src="https://scontent.iocvnpt.com/resources/portal//Images/LCI/vietlong/dia%20diem/nha%20tho%20da/thumb/1_ok.jpg_636601572016413146.jpg" alt="">
+      <img src="https://scontent.iocvnpt.com/resources/portal//Images/LCI/vietlong/dia%20diem/nha%20tho%20da/thumb/2_ok.jpg_636601572016881672.jpg" alt="">
+      <img src="https://scontent.iocvnpt.com/resources/portal//Images/LCI/vietlong/dia%20diem/nha%20tho%20da/thumb/3_ok.jpg_636601572017194178.jpg" alt="">
+    </div>
+  </div>
+</div>
+
+
+
+<div class="timeline-item">
+  <div class="time">09:30</div>
+  <div class="content">
+    <div class="title">
+    Thung lũng hoa Bắc Hà
+      <span class="price">30.000 đ</span>
+    </div>
+    <div class="location">📍Thải Giàng Phố, huyện Bắc Hà, tỉnh Lào Cai Xã Thải Giàng Phố, Huyện Bắc Hà, Tỉnh Lào Cai</div>
+    <div class="description">Thung lũng hoa Bắc Hà nằm cách trung tâm thị trấn khoảng 2 km. Đến nơi đây với màu xanh ngút ngàn của đồng lúa, ruộng ngô, với không gian vô cùng rực rỡ và thơ mộng của các loại hoa sẽ giúp bạn có cảm giác thật thư thái</div>
+    <div class="images">
+      <img src="https://scontent.iocvnpt.com/resources/portal//Images/LCI/vietlong/dia%20diem/thung%20l%c5%a9ng%20hoa/thumb/1_ok.jpg_636601567900677528.jpg" alt="">
+      <img src="https://scontent.iocvnpt.com/resources/portal//Images/LCI/vietlong/dia%20diem/thung%20l%c5%a9ng%20hoa/thumb/2_ok.jpg_636601567900990299.jpg" alt="">
+      <img src="https://scontent.iocvnpt.com/resources/portal//Images/LCI/vietlong/dia%20diem/thung%20l%c5%a9ng%20hoa/thumb/3_ok.jpg_636601567901302553.jpg" alt="">
+    </div>
+  </div>
+</div>
+
+<div class="timeline-item">
+  <div class="time">11:30</div>
+  <div class="content">
+    <div class="title">
+    Nhà Hàng Ngân Nga
+      <span class="price">150.000 đ</span>
+    </div>
+    <div class="location">📍115-117, Ngọc Uyên, Bắc Hà, Lào Cai Thị trấn Bắc Hà, Huyện Bắc Hà, Tỉnh Lào Cai</div>
+    <div class="description">Nhà hàng Ngân Nga Bắc Hà với kiến trúc tao nhã, thanh lịch, ấm cúng, tiện nghi nằm ở tầng trệt và tầng hai của khách sạn. Nhà hàng với sức chứa hơn 100 khách, luôn sẵn sàng phục vụ các món ăn được chế biến theo phong cách Việt Nam</div>
+    <div class="images">
+        <img src="https://scontent.iocvnpt.com/resources/portal//Images/LCI/Import/thumb/636574114479993812_1506839809163-nnbh-(1)_c.jpg" alt="">
+        <img src="https://scontent.iocvnpt.com/resources/portal//Images/LCI/Import/thumb/636574114480648967_1506839809647-nnbh-a(1)_o.jpg" alt="">
+        <img src="https://scontent.iocvnpt.com/resources/portal//Images/LCI/Import/thumb/636574114481274560_1506839809804-nnbh-a(3)_o.jpg" alt="">
+    </div>
+  </div>
+</div>
+
+  <div class="timeline-item">
+    <div class="time">14:30</div>
+    <div class="content">
+      <div class="title">
+        Hồ Na Cồ
+        <span class="price">Miễn Phí</span>
+      </div>
+      <div class="location">📍Thị trấn Bắc Hà-Huyện Bắc Hà Thị trấn Bắc Hà, Huyện Bắc Hà, Tỉnh Lào Cai.</div>
+      <div class="description">Theo ngôn ngữ của dân tộc Tày "Na" là ruộng lúa "Cồ" là rừng dẻ, "na cồ" nghĩa là ruộng lúa và rừng dẻ.chứng tỏ xưa kia chỗ này có một rừng dẻ và ruộng lúa, một phong cảnh tuyệt đẹp,ngày nay không còn nữa</div>
+      <div class="images">
+        <img src="https://scontent.iocvnpt.com/resources/portal//Images/LCI/vietlong/dia%20diem/na%20co/thumb/1_ok.jpg_636601538888113169.jpg" alt="">
+        <img src="https://scontent.iocvnpt.com/resources/portal//Images/LCI/vietlong/dia%20diem/na%20co/thumb/2_ok.jpg_636601538888425475.jpg" alt="">
+        <img src="https://scontent.iocvnpt.com/resources/portal//Images/LCI/vietlong/dia%20diem/na%20co/thumb/3_ok.jpg_636601538888738159.jpg" alt="">
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

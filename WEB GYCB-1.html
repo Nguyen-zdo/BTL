@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>FANSIPAN – THÁC BẠC – SAPA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: Cascadia Mono;
+      background: url('https://scontent.iocvnpt.com/resources/portal//Images/LCI/Import/636574199537218162_1506303159241-3_compressed.jpg') no-repeat center center fixed;      background-size: cover;
+      background-size: cover;
+      opacity:0,8;
+    }
+    .white-box {
+        max-width: 1200px;
+        margin: 40px auto;
+        background-color: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+    .top-bar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.618);
+      padding: 10px 20px;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+    .logo img {
+      height: 40px;
+      margin-right: 10px;
+    }
+    .logo h1 {
+      font-size: 22px;
+      color: #2c3e50;
+      margin: 0;
+    }
+    .search {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .search-box {
+      display: flex;
+      align-items: center;
+      background: #f7f7f7;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+    .search-box input {
+      border: none;
+      background: transparent;
+      outline: none;
+    }
+    .flag {
+      width: 30px;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      position: absolute;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.2); 
+      backdrop-filter: blur(4px); 
+      -webkit-backdrop-filter: blur(4px); 
+      z-index: 10;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+    }
+    nav a i {
+      margin-right: 8px;
+    }
+    nav a:hover {
+      background-color: #1abc9c;
+    }
+    @media (max-width: 768px) {
+      .top-bar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .search-weather {
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 10px;
+      }
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav a {
+        width: 100%;
+        padding: 10px;
+      }
+    } 
+    .timeline-item {
+      display: flex;
+      margin-bottom: 30px;
+    }
+    .time {
+      width: 80px;
+      font-weight: bold;
+      font-size: 18px;
+      margin-right: 10px;
+    }
+    .content {
+      background-color: #f4f4f4;
+      border-radius: 10px;
+      padding: 15px;
+      flex: 1;
+    }
+    .title {
+      font-size: 18px;
+      color: #1abc9c;
+      font-weight: bold;
+    }
+    .price {
+      float: right;
+      color: red;
+      font-weight: bold;
+    }
+    .location {
+      font-size: 14px;
+      margin: 5px 0;
+    }
+    .description {
+      font-size: 14px;
+      color: grey;
+      margin-bottom: 10px;
+    }
+    .images {
+      display: flex;
+      gap: 5px;
+      flex-wrap: wrap;
+    }
+    .images img {
+      width: 80px;
+      height: 60px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+    h3{
+        text-align: left;
+        font-size:30px;
+        margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+    <div class="background"></div>
+    <div class="top-bar">
+    <div class="logo">
+      
+    <h1><b>TÂY BẮC TOUR</b></h1>
+    </div>
+    <div class="search">
+      <div class="search-box">
+        <i class="fas fa-search"></i>
+        <input type="text" placeholder="Tìm kiếm...">
+      </div>
+      <img src="https://flagcdn.com/gb.svg" alt="flag" class="flag">
+    </div>
+  </div>
+  <nav>
+    <a href="TCindex.html"><i class="fas fa-home"></i>Trang Chủ</a>
+    <a href="#"><i class="fas fa-hotel"></i>Khách Sạn</a>
+    <a href="#"><i class="fas fa-plane"></i>Phương Tiện</a>
+    <a href="#"><i class="fas fa-map-marker-alt"></i>Điểm Đến</a>
+    <a href="#"><i class="fas fa-book"></i>Cẩm nang du lịch</a>
+    <a href="#"><i class="fas fa-utensils"></i>Ẩm Thực</a>
+    <a href="#"><i class="fas fa-credit-card"></i>Thanh Toán</a>
+    <a href="#"><i class="fas fa-headset"></i>Liên Hệ</a>
+  </nav>
+
+  <!-- Timeline item 1 -->
+  <div class="white-box">
+    <h3>Ngày 1</h3>
+    <div class="timeline-item">
+    <div class="time">07:30</div>
+    <div class="content">
+      <div class="title">
+        Cáp treo Phan xi păng
+        <span class="price">700.000 đ</span>
+      </div>
+      <div class="location">📍 Cách thị trấn Sa Pa 5km - Xã Hoàng Liên, Sa Pa, Lào Cai</div>
+      <div class="description">Phan Xi Păng là ngọn núi cao nhất Việt Nam, được gọi là “Nóc nhà Đông Dương”.</div>
+      <div class="images">
+        <img src="https://scontent.iocvnpt.com/resources/portal//Images/LCI/vietlong/dia%20diem/cap%20treo/thumb/1_ok.jpg_636601603514255099.jpg" alt="">
+        <img src="https://scontent.iocvnpt.com/resources/portal//Images/LCI/vietlong/dia%20diem/cap%20treo/thumb/2_ok.jpg_636601603514567548.jpg" alt="">
+        <img src="https://scontent.iocvnpt.com/resources/portal//Images/LCI/vietlong/dia%20diem/cap%20treo/thumb/3_ok.jpg_636601603514880033.jpg" alt="">
+      </div>
+    </div>
+  </div>
+
+  <!-- Timeline item 2 -->
+  <div class="timeline-item">
+    <div class="time">08:30</div>
+    <div class="content">
+      <div class="title">
+        Phan xi păng
+        <span class="price">Miễn phí</span>
+      </div>
+      <div class="location">📍 Cách thị trấn Sa Pa 9km - Xã Hoàng Liên, Sa Pa, Lào Cai</div>
+      <div class="description">Đỉnh Phan Xi Păng - nơi cao nhất Việt Nam và Đông Dương, thu hút nhiều du khách.</div>
+      <div class="images">
+        <img src="https://scontent.iocvnpt.com/resources/portal//Images/LCI/vietlong/dia%20diem/phan%20xi%20pang/thumb/1_ok.jpg_636601603912558621.jpg" alt="">
+        <img src="https://scontent.iocvnpt.com/resources/portal//Images/LCI/vietlong/dia%20diem/phan%20xi%20pang/thumb/4_ok.jpg_636601603913496461.jpg" alt="">
+        <img src="https://scontent.iocvnpt.com/resources/portal//Images/LCI/vietlong/dia%20diem/phan%20xi%20pang/thumb/3_ok.jpg_636601603913183883.jpg" alt="">
+      </div>
+    </div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="time">11:30</div>
+    <div class="content">
+      <div class="title">
+        Nhà Hàng Cá Hồi Song Nhi
+        <span class="price">150.000 đ</span>
+      </div>
+      <div class="location">📍 Thác Bạc, Sa Pa, Lào Cai Xã Hoàng Liên, Thị Xã Sa Pa, Tỉnh Lào Cai</div>
+      <div class="description">Nhà hàng song nhi sapa là nhà hàng chuyên phục vụ các món cá hồi cá tầm sapa tươi sống bắt chế biến tại chỗ với 500 chỗ ngồi và phong cảnh rất đẹp!</div>
+      <div class="images">
+        <img src="https://scontent.iocvnpt.com/resources/portal//Images/LCI/Import/thumb/636574112930502688_1506218077888-sn-a(1)_o.jpg" alt="">
+        <img src="https://scontent.iocvnpt.com/resources/portal//Images/LCI/Import/636574112931752537_1506218079279-sn-a(3)_o.jpg" alt="">
+        <img src="https://scontent.iocvnpt.com/resources/portal//Images/LCI/Import/636574112931127558_1506218078701-sn-a(2)_o.jpg" alt="">
+      </div>
+    </div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="time">13:30</div>
+    <div class="content">
+      <div class="title">
+        Thác Bạc
+        <span class="price">15.000 đ</span>
+      </div>
+      <div class="location">📍cạnh quốc lộ 4D, tuyến đường huyết mạch để đến tỉnh Lai Châu và chỉ cách khu vực trung tâm thị trấn Sa Pa khoảng 12 km về hướng tây Xã Hoàng Liên, Thị Xã Sa Pa, Tỉnh Lào Cai</div>
+      <div class="description">Thác Bạc có độ cao hơn 200 mét là thượng nguồn của dòng suối Mường Hoa với độ cao 1.800 m nằm dưới chân đèo Ô Quy Hồ. Đứng trên đỉnh núi Hàm Rồng ở trung tâm thị trấn Sa Pa có thể nhìn thấy thác Bạc trắng xóa vào ...</div>
+      <div class="images">
+        <img src="https://scontent.iocvnpt.com/resources/portal//Images/LCI/vietlong/dia%20diem/thac%20bac/thumb/1_ok.jpg_636601572484974494.jpg" alt="">
+        <img src="https://scontent.iocvnpt.com/resources/portal//Images/LCI/vietlong/dia%20diem/thac%20bac/thumb/2_ok.jpg_636601572485443194.jpg" alt="">
+        <img src="https://scontent.iocvnpt.com/resources/portal//Images/LCI/vietlong/dia%20diem/thac%20bac/5_ok.jpg_636601572486537256.jpg" alt="">
+      </div>
+    </div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="time">18:30</div>
+    <div class="content">
+      <div class="title">
+        Nhà hàng Khám Phá Việt
+        <span class="price">150.000 đ</span>
+      </div>
+      <div class="location">📍Số nhà 015 Đường Thạch Sơn, Thị trấn Sa pa, Tỉnh Lào Cai  Phường Hàm Rồng, Thị Xã Sa Pa, Tỉnh Lào Cai</div>
+      <div class="description">Nhà hàng Khám Phá Việt hay còn gọi là thắng cố A Quỳnh từ lâu đã trở thành một thương hiệu nổi tiếng tại thị trấn Sapa. Nằm ở trung tâm thị trấn với không gian rộng, ấm cúng với kiến trúc độc đáo mang đậm bản sắc vùng cao.</div>
+      <div class="images">
+        <img src="https://scontent.iocvnpt.com/resources/portal//Images/LCI/Import/thumb/636574109489788204_1506164689309-kpv-a(2)_o.jpg" alt="">
+        <img src="https://scontent.iocvnpt.com/resources/portal//Images/LCI/Import/thumb/636574109490413306_1506164689997-kpv-a(3)_o.jpg" alt="">
+        <img src="https://scontent.iocvnpt.com/resources/portal//Images/LCI/Import/thumb/636574109488850743_1506164688639-kpv-a(1)_o.jpg" alt="">
+      </div>
+    </div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="time">20:00</div>
+    <div class="content">
+      <div class="title">
+        Chợ tình Sa Pa
+        <span class="price">Miễn Phí</span>
+      </div>
+      <div class="location">📍Trung tâm thị trấn Phường Sa Pa, Thị Xã Sa Pa, Tỉnh Lào Cai</div>
+      <div class="description">"Nếu du khách đi du lịch Sapa đã cảm thấy thích thú với những phiên chợ Sapa nổi tiếng của các người dân bản địa nơi đây thì có lẽ chợ tình Sapa với một nét đặc trưng riêng biệt còn làm họ tò mò và hứng thú hơn.</div>
+      <div class="images">
+        <img src="https://scontent.iocvnpt.com/resources/portal//Images/LCI/vietlong/dia%20diem/cho%20tinh/thumb/2_ok.jpg_636601601702298007.jpg" alt="">
+        <img src="https://scontent.iocvnpt.com/resources/portal//Images/LCI/vietlong/dia%20diem/cho%20tinh/thumb/1_ok.jpg_636601601701984972.jpg" alt="">
+        <img src="https://scontent.iocvnpt.com/resources/portal//Images/LCI/vietlong/dia%20diem/cho%20tinh/thumb/4_ok.jpg_636601601702922277.jpg" alt="">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="white-box">
+  <h3>Ngày 2</h3>
+  <div class="timeline-item">
+  <div class="time">07:30</div>
+  <div class="content">
+    <div class="title">
+      Nhà thờ đá Sa Pa
+      <span class="price">Miễn Phí</span>
+    </div>
+    <div class="location">📍 Trung tâm thị trấn Phường Sa Pa, Thị Xã Sa Pa, Tỉnh Lào Cai</div>
+    <div class="description">Nhà thờ cổ còn có tên là nhà thờ đá hay nhà thờ Đức Mẹ Mân côi nằm ngay giữa trung tâm thị trấn Sapa, được người Pháp xây dựng từ đầu thế kỷ 20. Trước khi đặt những viên gạch móng đầu tiên cho công trình này.</div>
+    <div class="images">
+      <img src="https://scontent.iocvnpt.com/resources/portal//Images/LCI/vietlong/dia%20diem/nha%20tho%20da/thumb/1_ok.jpg_636601572016413146.jpg" alt="">
+      <img src="https://scontent.iocvnpt.com/resources/portal//Images/LCI/vietlong/dia%20diem/nha%20tho%20da/thumb/2_ok.jpg_636601572016881672.jpg" alt="">
+      <img src="https://scontent.iocvnpt.com/resources/portal//Images/LCI/vietlong/dia%20diem/nha%20tho%20da/thumb/3_ok.jpg_636601572017194178.jpg" alt="">
+    </div>
+  </div>
+</div>
+
+
+
+<div class="timeline-item">
+  <div class="time">11:30</div>
+  <div class="content">
+    <div class="title">
+      Nhà hàng Dao đỏ
+      <span class="price">150.000 đ</span>
+    </div>
+    <div class="location">📍04B, Thác bạc , Sa Pa, Lào Cai Phường Sa Pa, Thị Xã Sa Pa, Tỉnh Lào Cai</div>
+    <div class="description">Nhà hàng Red Dao này nằm ngay thị trấn Sapa, vị trí đẹp gần chợ Sapa. Ở đây chuyên phục vụ các đoàn khách du lịch Việt Nam và Quốc tế. Trong không gian mát lạnh của Sapa, ngồi trong một ngôi nhà kiến trúc mộc mạc.</div>
+    <div class="images">
+      <img src="https://scontent.iocvnpt.com/resources/portal//Images/LCI/Import/thumb/636574112614019647_1506217525539-rdh-a1_o.jpg" alt="">
+      <img src="https://scontent.iocvnpt.com/resources/portal//Images/LCI/Import/thumb/636574112614644742_1506217526961-rdh-a3_o.jpg" alt="">
+      <img src="https://scontent.iocvnpt.com/resources/portal//Images/LCI/Import/thumb/636574112615113386_1506217527618-rdh-a7_o.jpg" alt="">
+    </div>
+  </div>
+</div>
+
+<div class="timeline-item">
+  <div class="time">14:30</div>
+  <div class="content">
+    <div class="title">
+      Bản Cát Cát
+      <span class="price">70.000 đ</span>
+    </div>
+    <div class="location">📍Bản Cát Cát, xã Hoàng Liên, thị xã Sa Pa, tỉnh Lào Cai Xã Hoàng Liên, Thị Xã Sa Pa, Tỉnh Lào Cai</div>
+    <div class="description">Giữa khung cảnh núi rừng hoang sơ hùng vĩ của mảnh đất Sa Pa, bản Cát Cát mộc mạc hiện lên đầy cuốn hút với nhà gỗ đơn sơ, những con suối nhỏ chảy róc rách, những tấm thổ cẩm rực rỡ sắc màu và con người dân tộc thiểu số</div>
+    <div class="images">
+      <img src="https://scontent.iocvnpt.com/resources/portal//Images/LCI/vietlong/dia%20diem/cat%20cat/thumb/3_ok.jpg_636601602155510546.jpg" alt="">
+      <img src="https://scontent.iocvnpt.com/resources/portal//Images/LCI/vietlong/dia%20diem/cat%20cat/thumb/2_ok.jpg_636601602155041641.jpg" alt="">
+      <img src="https://scontent.iocvnpt.com/resources/portal//Images/LCI/vietlong/dia%20diem/cat%20cat/thumb/4_ok.jpg_636601602155984550.jpg" alt="">
+    </div>
+  </div>
+</div>
+
+</div>
+</body>
+</html>
